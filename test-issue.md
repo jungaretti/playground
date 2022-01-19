@@ -6,4 +6,4 @@ labels: ''
 assignees: ''
 ---
 
-This is a test issue created by an action.
+This is a test issue created by an action. Only one test issue should be created.
