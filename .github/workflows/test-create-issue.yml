@@ -1,0 +1,18 @@
+name: Create Issue Once
+
+on: push
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@master
+    - name: Create issue
+      uses: JasonEtco/create-an-issue@9e6213aec58987fa7d2f4deb8b256b99e63107a2
+      env:
+        GITHUB_TOKEN: ${{ secrets.ISSUE_TOKEN }}
+      with:
+        filename: test-issue.md
+        update_existing: false
+        search_existing: open
