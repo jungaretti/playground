@@ -1,2 +1,3 @@
-# playground
-Somewhere to explore new ideas quickly
+# Playground
+
+Somewhere to explore new ideas quickly in branches
