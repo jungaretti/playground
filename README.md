@@ -1,3 +1,5 @@
-# Playground
+# Requirements Bug
 
-Somewhere to explore new ideas quickly in branches
+```
+python -c 'import transformers'
+```
