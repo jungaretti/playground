@@ -1,5 +1,8 @@
 {
   "build": {
     "dockerfile": "Dockerfile"
+  },
+  "hostRequirements": {
+     "gpus": 1
   }
 }
