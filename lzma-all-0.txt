@@ -1,0 +1,8 @@
+Searching for python on PATH and testing for lzma...
+/usr/bin/python2.7: false
+/usr/bin/python3.8: true
+/opt/conda/bin/python: true
+/opt/conda/bin/python3.10: true
+/opt/conda/bin/python3.1: true
+/opt/python/3.10.4/bin/python3.10: false
+/opt/python/3.10.4/bin/python: false

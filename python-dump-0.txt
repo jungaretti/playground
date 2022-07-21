@@ -1,0 +1,12 @@
+python
+/home/codespace/.python/current/bin/python
+Python 3.10.4
+python3
+/home/codespace/.python/current/bin/python3
+Python 3.10.4
+pip
+/home/codespace/.python/current/bin/pip
+pip 22.1.2 from /opt/python/latest/lib/python3.10/site-packages/pip (python 3.10)
+pip3
+/home/codespace/.python/current/bin/pip3
+pip 22.1.2 from /opt/python/latest/lib/python3.10/site-packages/pip (python 3.10)
