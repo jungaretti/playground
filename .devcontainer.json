@@ -1,0 +1,7 @@
+{
+    "customizations": {
+        "codespaces": {
+            "openFiles": ["demo.ipynb"]
+        }
+    },
+}
