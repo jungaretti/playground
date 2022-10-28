@@ -4,7 +4,7 @@ import tornado.web
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("Hello world")
+        self.write("Capybara")
 
 def make_app():
     return tornado.web.Application([
@@ -13,7 +13,6 @@ def make_app():
 
 async def main():
     print("Starting server...")
-
     app = make_app()
     app.listen(8888)
     await asyncio.Event().wait()
