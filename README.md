@@ -1,3 +1,3 @@
-# Playground
+# Simple Tornado Server
 
-Somewhere to explore new ideas quickly in branches
+`python3 main.py`
