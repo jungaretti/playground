@@ -13,14 +13,21 @@
       return;
     }
 
-    let headers = {};
-
+    let tokenHeaders = {};
     if (token) {
-      headers['x-github-token'] = token
+      tokenHeaders['x-github-token'] = token
     }
 
     try {
-      const res = await fetch(url, { headers });
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            ...tokenHeaders
+        },
+        body: JSON.stringify({ "id": 78912 }),
+      });
       text = `Response: ${res.status}`;
       console.log(text)
     } catch {
