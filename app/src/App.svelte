@@ -1,20 +1,46 @@
 <script>
   let text = "Click the button to send a request";
+  let url = "";
+  let token = "";
 
-  const handleClick = async () => {
-    text = "Sending a new message to API"
+  const onSubmit = async (e) => {
+    text = `Sending a new message to '${url}'`
     console.log(text)
 
-    const url = "http://127.0.0.1:3000/api/hello";
-    const res = await fetch(url);
-    const data = await res.json();
+    if (!url) {
+      text = "No URL specified!"
+      console.log(text)
+      return;
+    }
 
-    text = `Response: ${res.status} ${data.message.text}`;
-    console.log(text)
+    let headers = {};
+
+    if (token) {
+      headers['x-github-token'] = token
+    }
+
+    try {
+      const res = await fetch(url, { headers });
+      text = `Response: ${res.status}`;
+      console.log(text)
+    } catch {
+      text = 'Something went wrong'
+      console.log(text)
+    }
   };
 </script>
 
 <div>
-  <button on:click={handleClick}>Send request to API</button>
   <p>{text}</p>
+  <form on:submit|preventDefault={onSubmit}>
+    <div>
+      <label for="url">PFS URL</label>
+      <input type="text" id="url" bind:value={url} />
+    </div>
+    <div>
+      <label for="toke">GitHub token</label>
+      <input type="text" id="text" bind:value={token} />
+    </div>
+    <button type="submit">Send request</button>
+  </form>
 </div>
