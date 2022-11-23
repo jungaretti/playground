@@ -32,6 +32,7 @@ app.options("/", (req, res) => {
     "Access-Control-Allow-Headers",
     req.headers["access-control-request-headers"]
   );
+  res.status(204);
 
   res.send();
 });
