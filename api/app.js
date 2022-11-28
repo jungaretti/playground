@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", req.headers["origin"]);
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.json({
     message: {
       text: "Hello world!",
@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", req.headers["origin"]);
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.json({
     message: {
       text: "Hello world!",
@@ -21,7 +21,7 @@ app.post("/", (req, res) => {
 });
 
 app.put("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", req.headers["origin"]);
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.json({
     message: {
       text: "Hello world!",
@@ -30,7 +30,7 @@ app.put("/", (req, res) => {
 });
 
 app.delete("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", req.headers["origin"]);
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.json({
     message: {
       text: "Hello world!",

@@ -57,8 +57,7 @@
 </div>
 <div>
   <button on:click={() => sendRequest("GET")}>Send GET request</button>
-  <button on:click={() => sendRequest("POST")}>Send POST requeest</button>
+  <button on:click={() => sendRequest("POST")}>Send POST request</button>
   <button on:click={() => sendRequest("PUT")}>Send PUT request</button>
   <button on:click={() => sendRequest("DELETE")}>Send DELETE request</button>
-  <button>Connect to WebSocket</button>
 </div>
