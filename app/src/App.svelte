@@ -1,7 +1,8 @@
 <script>
-  let text = "Click the button to send a request";
+  let text = "Click a button to send a request";
   let url = "";
-  let token = "";
+  let githubToken = "";
+  let basisToken = "";
 
   const sendRequest = async (method) => {
     text = `Sending a new message to '${url}'`
@@ -14,8 +15,11 @@
     }
   
     let tokenHeaders = {};
-    if (token) {
-      tokenHeaders['x-github-token'] = token
+    if (githubToken) {
+      tokenHeaders['x-github-token'] = githubToken
+    }
+    if (basisToken) {
+      tokenHeaders['X-Tunnel-Authorization'] = `tunnel ${basisToken}`
     }
 
     let body = undefined;
@@ -46,12 +50,16 @@
   <p>{text}</p>
   <form>
     <div>
-      <label for="url">PFS URL</label>
+      <label for="url">Request URL</label>
       <input type="text" id="url" bind:value={url} />
     </div>
     <div>
-      <label for="toke">GitHub token</label>
-      <input type="password" id="text" bind:value={token} />
+      <label for="github-token">X-GitHub-Token</label>
+      <input type="password" id="github-token" bind:value={githubToken} />
+    </div>
+    <div>
+      <label for="basis-token">X-Tunnel-Authorization</label>
+      <input type="password" id="basis-token" bind:value={basisToken} />
     </div>
   </form>
 </div>
