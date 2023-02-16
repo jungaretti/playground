@@ -1,0 +1,29 @@
+{
+    "notebook.kernelPicker.type": "all",
+    "jupyter.kernels.filter": [
+        {
+            "path": "/opt/conda/bin/python",
+            "type": "pythonEnvironment"
+        },
+        {
+            "path": "/home/codespace/.local/share/jupyter/kernels/python3/kernel.json",
+            "type": "jupyterKernelspec"
+        },
+        {
+            "path": "/usr/local/python/current/bin/python3",
+            "type": "pythonEnvironment"
+        },
+        {
+            "path": "/usr/local/python/current/bin/python",
+            "type": "pythonEnvironment"
+        },
+        {
+            "path": "/usr/bin/python3",
+            "type": "pythonEnvironment"
+        },
+        {
+            "path": "/bin/python3",
+            "type": "pythonEnvironment"
+        }
+    ]
+}
