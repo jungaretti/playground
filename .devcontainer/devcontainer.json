@@ -2,7 +2,8 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "./dotnet": {
-            "version": "latest"
+            "version": "latest",
+            "additionalVersions": "6.0.403"
         }
     }
 }
