@@ -1,0 +1,3 @@
+[submodule "devcontainers-features"]
+	path = devcontainers-features
+	url = https://github.com/sliekens/devcontainers-features.git

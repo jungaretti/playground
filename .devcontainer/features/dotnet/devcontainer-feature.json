@@ -1,0 +1,40 @@
+{
+    "id": "dotnet",
+    "version": "2.0.0",
+    "name": "Dotnet CLI",
+    "documentationURL": "https://github.com/devcontainers/features/tree/main/src/dotnet",
+    "description": "Installs .NET SDK, which includes the .NET CLI and the shared runtime. Offers options to install multiple SDK versions.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "lts",
+                "8.0",
+                "7.0",
+                "6.0"
+            ],
+            "default": "latest",
+            "description": "Version of .NET SDK to install. Use 'latest' for the latest version, 'lts' for the latest LTS version, 'X.Y' or 'X.Y.Z' for a specific version."
+        },
+        "additionalVersions": {
+            "type": "string",
+            "default": "",
+            "description": "Comma-separated list of additional .NET SDK versions to install. Use 'latest' for the latest version, 'lts' for the latest LTS version, 'X.Y' or 'X.Y.Z' for a specific version."
+        }
+    },
+    "containerEnv": {
+        "DOTNET_ROOT": "/usr/share/dotnet",
+        "PATH": "$PATH:$DOTNET_ROOT:~/.dotnet/tools"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp"
+            ]
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
